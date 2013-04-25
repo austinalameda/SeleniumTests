@@ -1,0 +1,28 @@
+{
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": " http://www1.moon-ray.com/v2.4/autosauce_pthrough.php?key=ruVerU26"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//td[@id='tracking_tab']//a[.=' Tracking']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "bold_smartforms"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Form Manager"
+    }
+  ]
+}

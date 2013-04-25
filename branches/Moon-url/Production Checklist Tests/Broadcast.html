@@ -1,0 +1,28 @@
+{
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://www1.moon-ray.com/v2.4/autosauce_pthrough.php?key=ruVerU26"
+    },
+    {
+      "type": "get",
+      "url": "https://www1.moon-ray.com/v2.4/ajax_process.php?action=edit_email&id=271,264"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='xbox']/div/form/select[1]/option[4]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "action_btn_Send_E-mail"
+      }
+    }
+  ]
+}

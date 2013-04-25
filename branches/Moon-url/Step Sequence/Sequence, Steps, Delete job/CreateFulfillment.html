@@ -1,0 +1,113 @@
+{
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://www1.moon-ray.com/v2.4/contact_manager.php"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//td[@id='sequence_manager_tab']//a[.=' Autopilot']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "action_btn_Add_Sequence"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "name",
+        "value": "drip_name"
+      },
+      "text": "Autosauce Fulfillment"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='sequence_console']//div[.='Add Fulfillment']"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']/center[1]/table/tbody/tr[2]/td[2]/input"
+      },
+      "text": "1"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']//select[.='DailyWeeklyMonthly']/option[2]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']/center[3]/table/tfoot/tr/td[2]/input"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']/center[3]/table/tbody/tr/td[2]/input"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']/center[3]/table/tbody/tr/td[2]/input"
+      },
+      "text": "Colton@sendpepper.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']/center[3]/table/tbody/tr/td[3]/div/table/tbody/tr[1]/td[2]/input"
+      },
+      "text": "test"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']/center[3]/table/tbody/tr/td[3]/div/table/tbody/tr[2]/td[2]/textarea"
+      },
+      "text": "testtest"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='Fulfillment_content']//span[.='Check/Uncheck All']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='save_button_container_2']/input"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='bmmainload']/table/tbody/tr[1]/td/table/tbody/tr[1]/td/form/div[1]/input[1]"
+      }
+    }
+  ]
+}

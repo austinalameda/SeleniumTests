@@ -1,0 +1,55 @@
+<?php
+require_once 'PHPWebDriver/WebDriver.php';
+$wd = new PHPWebDriver_WebDriver('http://moonray:da003976-1a7f-4ff9-851c-f90e96e4eac0@ondemand.saucelabs.com:80/wd/hub');
+$session = $wd->session($_SERVER['argv'][2], array('version' => $_SERVER['argv'][3], 'os' => $_SERVER['argv'][1]));
+
+function cookies_contain($cookies, $name) {
+     foreach ($cookies as $arr) {
+         if ($arr['name'] == $name) {
+             return true;
+         }
+     }
+     return false;
+}
+
+function get_cookie($cookies, $name) {
+     foreach ($cookies as $arr) {
+         if ($arr['name'] == $name) {
+             return $arr;
+         }
+     }
+     return false;
+}
+
+function split_keys($toSend){
+      $payload = array("value" => preg_split("//u", $toSend, -1, PREG_SPLIT_NO_EMPTY));
+      return $payload;
+}
+
+try {
+$session->open("http://www1.moon-ray.com/v2.4/autosauce_pthrough.php?key=ruVerU26");
+$session->element("xpath", "//td[@id='affiliate_tab']//a[.=' Affiliates']")->click();
+$session->element("id", "action_btn_Create_new_Signup_Form")->click();
+$session->element("id", "affiliate_sform_name")->click();
+$session->element("id", "affiliate_sform_name")->clear();
+$session->element("id", "affiliate_sform_name")->value(split_keys("AutoSauce Signup"));
+$session->element("xpath", "//form[@class='formBuilder']/fieldset[2]/fieldset[1]/ul[1]/li/input")->click();
+$session->element("xpath", "//form[@class='formBuilder']/fieldset[2]/fieldset[1]/ul[2]/li/input")->click();
+$session->element("link text", "Add Response")->click();
+$session->element("xpath", "//tr[@class='detailWrapper']/td/div/table/tbody/tr[2]/td/table/tfoot/tr/td/input")->click();
+if (!($session->element("xpath", "//tr[@class='detailWrapper']/td/div/table/tbody/tr[2]/td/table/tbody/tr/td[1]/select/option[19]")->selected())) {
+    $session->element("xpath", "//tr[@class='detailWrapper']/td/div/table/tbody/tr[2]/td/table/tbody/tr/td[1]/select/option[19]")->click();
+}
+$session->element("link text", "[Wordpress Membership]")->click();
+$session->element("xpath", "//span[@id='bodydiv']/span/div[2]/center/input")->click();
+$session->element("xpath", "//tr[@class='detailWrapper']/td/div/input[2]")->click();
+$session->element("name", "save")->click();
+
+$session->close();
+}
+catch(Exception $e) {
+echo "<b>Test: <a href='https://saucelabs.com/tests/".substr($session->getURL(), strrpos($session->getURL(), "/") + 1)."'>https://saucelabs.com/tests/".substr($session->getURL(), strrpos($session->getURL(), "/") + 1)."</a></b>
+";
+var_dump($e); 
+}
+?>

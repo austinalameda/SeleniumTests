@@ -1,0 +1,90 @@
+{
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://www1.moon-ray.com/v2.4/autosauce_pthrough.php?key=ruVerU26"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Admin"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='xbox']//u[.='Task Outcome Manager']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "New Task Type"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//ul[@id='ctylist_0']/li[2]/table/tbody/tr[2]/td[2]/input"
+      },
+      "text": "AutoSauce"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//ul[@id='ctylist_0']//td[.='New Call Outcome']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//ul[@id='ctylist_0']/li[2]/table/tbody/tr[6]/td/span/a"
+      }
+    },
+    {
+      "type": "sendKeysToElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//ul[@id='ctylist_0']/li[2]/table/tbody/tr[2]/td[2]/input"
+      },
+      "text": "\\undefined"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//ul[@id='list_1']/li/div/input"
+      },
+      "text": "AutoSauce"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "action_btn_Save_Changes"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='xbox']//u[.='Task Outcome Manager']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//ul[@id='ctylist_0']/li[2]/table/tbody/tr[2]/td[1]/img"
+      }
+    }
+  ]
+}

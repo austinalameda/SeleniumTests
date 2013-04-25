@@ -1,0 +1,29 @@
+{
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://www1.moon-ray.com/v2.4/autosauce_pthrough.php?key=ruVerU26"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//td[@id='landingpage_manager_tab']//a[.=' Pages']"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//td[@class='searchWrapper']/table/tbody/tr[1]/td/input"
+      },
+      "text": "Production"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Production - Orderform w/Rules"
+    }
+  ]
+}
